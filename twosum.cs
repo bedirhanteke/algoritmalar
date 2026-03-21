@@ -76,6 +76,34 @@ public class TwoSum
         // Eğer hiçbir eşleşme çıkmazsa (soru her zaman bir çözüm var dese de) boş dizi döndür.
         return new int[0];
     }
+
+    public int[] Solution(int[] sayilar, int hedef) {
+        // 'hafiza' sözlüğü: Anahtar (Key) olarak sayıyı, 
+        // Değer (Value) olarak o sayının orijinal indeksini tutar.
+        var hafiza = new Dictionary<int, int>();
+
+        for (int i = 0; i < sayilar.Length; i++) {
+            int suAnkiSayi = sayilar[i];
+            int gerekenParca = hedef - suAnkiSayi;
+
+            // 1. ADIM: "Bana lazım olan sayı hafızamda var mı?" diye sor.
+            if (hafiza.ContainsKey(gerekenParca)) {
+                // EĞER VARSA: Aradığımız ikiliyi bulduk!
+                // hafiza[gerekenParca] bize o sayının orijinal indeksini "şak" diye verir.
+                return new int[] { hafiza[gerekenParca], i };
+            }
+
+            // 2. ADIM: "Aradığım sayı hafızada yoksa, şu anki sayıyı hafızaya ekle."
+            // "Belki ileride gelecek bir sayı için ben 'gereken parça' olurum" der.
+            // Önemli: Aynı sayıdan iki tane varsa hata almamak için kontrol ekliyoruz.
+            if (!hafiza.ContainsKey(suAnkiSayi)) {
+                hafiza.Add(suAnkiSayi, i);
+            }
+        }
+
+        // Eğer hiçbir eşleşme bulunamazsa boş dizi döndür.
+        return new int[0];
+    }
     
-    
+
 }

@@ -22,7 +22,7 @@ namespace MerhabaCsharp
             // ogr.Bolum = "Bilgisayar Mühendisliği";
 
             // Metodu çağırma
-            ogr.SelamVer();
+            Ogrenci.SelamVer();
         }
     }
     

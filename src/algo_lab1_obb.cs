@@ -47,6 +47,10 @@ namespace Algo_lab1_OOP
             int sonuc = 0;
             foreach (char karakter in st)
             {
+                //Eğer elinde '5' karakteri varsa ve sen bundan '0' karakterini çıkarırsan:$$53 - 48 = 5
+                //Matematiksel olarak eline gerçek 5 sayısı geçer. Yani bu işlem karakteri sayıya "zorlamak" değil,
+                //karakter kodları arasındaki farkı kullanarak sayı değerini bulmaktır.
+
                 if (karakter >= '0' && karakter <= '9')
                     sonuc = sonuc * 10 + (karakter - '0');
             }

@@ -21,8 +21,8 @@ namespace MerhabaCsharp
             // ogr.Ad = "Bedirhan";
             // ogr.Bolum = "Bilgisayar Mühendisliği";
 
-            // // Metodu çağırma
-            // ogr.SelamVer();
+            // Metodu çağırma
+            ogr.SelamVer();
         }
     }
     

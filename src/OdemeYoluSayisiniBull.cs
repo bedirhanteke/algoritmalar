@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 namespace algoritmalar.src
 {
     class OdemeYoluSayisiniBull{
-    static int OdemeYoluSayisiniBul(int[] paralar, int kacCesitParaVar, int kalanBorc)
+        
+
+        internal static int OdemeYoluSayisiniBul(int[] paralar, int kacCesitParaVar, int kalanBorc)
     {
         // --- DURDURMA KOŞULLARI (Base Cases) ---
 

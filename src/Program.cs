@@ -1,4 +1,5 @@
 ﻿using System;
+using algoritmalar.src;
 
 namespace MerhabaCsharp
 {
@@ -23,6 +24,15 @@ namespace MerhabaCsharp
 
             // Metodu çağırma
             Ogrenci.SelamVer();
+
+            // Elimizdeki bozuk paralar (Örn: 1 TL, 2 TL, 5 TL)
+            int[] bozukParaListesi = { 1, 2, 5 };
+            int paraCesidiSayisi = bozukParaListesi.Length;
+            int hedefBorc = 4; // Örnek olarak 4 TL'yi hesaplayalım
+
+            int sonuc = OdemeYoluSayisiniBull.OdemeYoluSayisiniBul(bozukParaListesi, paraCesidiSayisi, hedefBorc);
+
+            Console.WriteLine($"{hedefBorc} TL ödemek için toplam {sonuc} farklı yol var.");
         }
     }
     

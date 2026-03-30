@@ -20,7 +20,7 @@ namespace algoritmalar.src
                     int mevcutToplam = 0;
                     
                     //matris içinde dolaşacak çerçeve oluşturulur 
-                    for(int x= i; x<i + altBoyut; x++) //satırı gezer 
+                    for(int x= i; x<i + altBoyut; x++) //satırı gezer x'i i ye eşitliyoruz daha pencere o konumdan başlasın 
                     {
                         for(int y=j; y< j + altBoyut; y++)
                         {
